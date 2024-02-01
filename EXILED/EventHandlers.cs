@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RealisticSizes
 {
-    public class EventHandlers : MonoBehaviour
+    public class EventHandlers
     {
         public void PlayerDied(DiedEventArgs ev)
         {
