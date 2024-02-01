@@ -10,7 +10,7 @@ namespace RealisticSizes
 
         public static Plugin Instance;
         public EventHandlers eventHandlers { get; set; }
-        public const string PluginVersion = "1.0.0";
+        public const string PluginVersion = "1.0.1";
         public string HintsFilePath;
 
         public override string Name => "Realistic Sizes";
@@ -22,7 +22,6 @@ namespace RealisticSizes
         {
             Instance = this;
             eventHandlers = new EventHandlers();
-            RueI.RueIMain.EnsureInit();
 
             RegisterEvents();
 
@@ -44,13 +43,11 @@ namespace RealisticSizes
         {
             Exiled.Events.Handlers.Player.Died += eventHandlers.PlayerDied;
             Exiled.Events.Handlers.Player.Spawned += eventHandlers.PlayerSpawned;
-            Exiled.Events.Handlers.Server.RoundStarted += eventHandlers.OnRoundStarted;
         }
         public void UnregisterEvents()
         {
             Exiled.Events.Handlers.Player.Died -= eventHandlers.PlayerDied;
             Exiled.Events.Handlers.Player.Spawned -= eventHandlers.PlayerSpawned;
-            Exiled.Events.Handlers.Server.RoundStarted -= eventHandlers.OnRoundStarted;
         }
     }
 }
