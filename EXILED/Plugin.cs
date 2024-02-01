@@ -10,8 +10,7 @@ namespace RealisticSizes
 
         public static Plugin Instance;
         public EventHandlers eventHandlers { get; set; }
-        public const string PluginVersion = "1.0.1";
-        public string HintsFilePath;
+        public const string PluginVersion = "1.0.2";
 
         public override string Name => "Realistic Sizes";
         public override string Author => "tux";
