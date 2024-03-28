@@ -16,7 +16,7 @@ namespace RealisticSizes
         }
         public void PlayerSpawned(SpawnedEventArgs ev)
         {
-            if (ev.Player != null) 
+            if (ev.Player != null && !ev.Player.IsNPC) 
             {
                 System.Random random = new System.Random();
                 float randomFloat = (float)(random.NextDouble() * (Plugin.Instance.Config.MaxSize - Plugin.Instance.Config.MinSize) + Plugin.Instance.Config.MinSize);
